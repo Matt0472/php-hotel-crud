@@ -1,4 +1,6 @@
-<?php ?>
+<?php
+  include 'database.php';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +12,33 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>FLOOR</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+          if(!empty($rooms)) {
+            foreach ($rooms as $room) { ?>
+              <tr>
+                <td> <?php echo $room['id']; ?></td>
+                <td> <?php echo $room['floor']; ?></td>
+                <td><a class="btn btn-primary" href="#">VIEW</a></td>
+                <td><a class="btn btn-success" href="#">UPDATE</a></td>
+                <td><a class="btn btn-danger" href="#">DELETE</a></td>
+              </tr>
+        <?php }
+          }
+        ?>
+      </tbody>
+    </table>
+  </div>
 </body>
 </html>

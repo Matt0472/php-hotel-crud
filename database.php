@@ -13,7 +13,6 @@
     while($row = $result->fetch_assoc()) {
       $rooms[] = $row;
     }
-    var_dump($rooms); die();
   } elseif ($result) {
     echo "0 results";
   } else {
