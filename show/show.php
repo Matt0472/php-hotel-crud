@@ -13,10 +13,10 @@
     <h2>Dettaglio stanza</h2>
    <ul>
     <?php foreach ($rooms as $room) { ?>
+      <li><?php echo 'Stanza ID: ' . $room['id']; ?></li>
+      <li><?php echo 'Piano: ' . $room['floor']; ?></li>
       <li><?php echo 'Numero di stanza: ' . $room['room_number']; ?></li>
       <li><?php echo 'Numero Letti: ' . $room['beds']; ?></li>
-      <li><?php echo 'Stanza creata il: ' . $room['created_at']; ?></li>
-      <li><?php echo 'Stanza aggiornata il: ' . $room['updated_at']; ?></li>
     <?php } ?>
    </ul>
   </div>
