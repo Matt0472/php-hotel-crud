@@ -13,6 +13,7 @@
 </head>
 <body>
   <div class="container">
+    <h1 class="text-center">Tutte le stanze in hotel</h1>
     <table class="table">
       <thead>
         <tr>
@@ -30,7 +31,7 @@
               <tr>
                 <td> <?php echo $room['id']; ?></td>
                 <td> <?php echo $room['floor']; ?></td>
-                <td><a class="btn btn-primary" href="#">VIEW</a></td>
+                <td><a class="btn btn-primary" href="show/show.php?id=<?php echo $room['id']; ?>">VIEW</a></td>
                 <td><a class="btn btn-success" href="#">UPDATE</a></td>
                 <td><a class="btn btn-danger" href="#">DELETE</a></td>
               </tr>
