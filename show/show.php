@@ -4,10 +4,10 @@
   ?>
 
 
-  <div class="container">
+  <div class="container mb-5">
     <div class="row">
      <div class="col-12">
-      <div class="card">
+      <div class="card mt-5">
         <h1>Numero di stanza: <?php echo $rooms['room_number'] ?></h1>
           <ul>
               <li><?php echo 'ID stanza: ' . $rooms['id']; ?></li>
@@ -19,6 +19,6 @@
       </div>
      </div>
     </div>
-    
+    </div>
   
-  <?php __DIR__ . '/../partials/footer.php' ?>
+  <?php include __DIR__ . '/../partials/footer.php' ?>

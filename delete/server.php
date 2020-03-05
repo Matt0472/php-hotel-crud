@@ -17,3 +17,6 @@
   }
   $conn->close();
 ?>
+
+
+<!-- $sql = "SELECT * FROM `stanze` WHERE `id` = $idRoom"; -->
