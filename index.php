@@ -22,10 +22,10 @@
               <tr>
                 <td> <?php echo $room['id']; ?></td>
                 <td> <?php echo $room['floor']; ?></td>
-                <td><a class="btn btn-primary" href="show/show.php?id=<?php echo $room['id']; ?>">VIEW</a></td>
-                <td><a class="btn btn-success" href="#">UPDATE</a></td>
+                <td class="text-center"><a class="btn btn-primary" href="show/show.php?id=<?php echo $room['id']; ?>">VIEW</a></td>
+                <td class="text-center"><a class="btn btn-success" href="update/edit.php?id=<?php echo $room['id']; ?>">UPDATE</a></td>
                 <td>
-                  <form action="delete/server.php" method="POST">
+                  <form class="text-center" action="delete/server.php" method="POST">
                     <input type="hidden" name="id" value="<?php echo $room['id']; ?>">
                     <input class="btn btn-danger" type="submit" value="DELETE">
                   </form>
