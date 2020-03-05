@@ -1,18 +1,9 @@
 <?php
-  include 'database.php';
+  include 'server.php';
+  include 'partials/header.php'
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="dist/app.css">
-  <title>Document</title>
-</head>
-<body>
-  <div class="container">
     <h1 class="text-center">Tutte le stanze in hotel</h1>
     <table class="table">
       <thead>
@@ -45,6 +36,5 @@
         ?>
       </tbody>
     </table>
-  </div>
-</body>
-</html>
+  
+  <?php include 'partials/footer.php'; ?>

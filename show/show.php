@@ -7,9 +7,9 @@
   <title>Document</title>
 </head>
 <body>
-  <?php include 'server.php';?>
 
   <div class="container">
+  <?php include 'server.php';?>
     <h2>Dettaglio stanza</h2>
    <ul>
       <li><?php echo 'Stanza ID: ' . $rooms['id']; ?></li>
