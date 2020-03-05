@@ -9,4 +9,11 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="container">
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="navbar-brand"> Hotel Booleana</div>
+        <ul class="navbar-nav">
+          <li><a href="<?php echo $basePath ?>">Tutte le stanze</a></li>
+        </ul>
+    </nav>
+
+  <div class="container mt-5">
