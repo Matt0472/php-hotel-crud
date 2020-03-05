@@ -7,7 +7,7 @@
 
   $idRoom = $_POST['id'];
 
-  $sql = "DELETE * FROM `stanze` WHERE `id` = $idRoom";
+  $sql = "DELETE * FROM `stanze` WHERE `id` = `$idRoom`";
   $result = $conn->query($sql);
 
   if ($result) {
