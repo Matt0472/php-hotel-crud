@@ -14,12 +14,12 @@
   if ($result && $result->num_rows == 0) {
     die('NO ID');
   }
-  $sql = "DELETE * FROM `stanze` WHERE `id` = `$idRoom`";
+  $sql = "DELETE FROM `stanze` WHERE `id` = $idRoom";
 
   $result = $conn->query($sql);
-  
+
   if ($result) {
-    echo 'CANCELLAZIONE AVVENUTA';
+    header("Location: $basePath");
   } else {
     echo 'CANCELLAZIONE NON AVVENUTA';
   }
