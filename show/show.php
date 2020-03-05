@@ -12,12 +12,10 @@
   <div class="container">
     <h2>Dettaglio stanza</h2>
    <ul>
-    <?php foreach ($rooms as $room) { ?>
-      <li><?php echo 'Stanza ID: ' . $room['id']; ?></li>
-      <li><?php echo 'Piano: ' . $room['floor']; ?></li>
-      <li><?php echo 'Numero di stanza: ' . $room['room_number']; ?></li>
-      <li><?php echo 'Numero Letti: ' . $room['beds']; ?></li>
-    <?php } ?>
+      <li><?php echo 'Stanza ID: ' . $rooms['id']; ?></li>
+      <li><?php echo 'Piano: ' . $rooms['floor']; ?></li>
+      <li><?php echo 'Numero di stanza: ' . $rooms['room_number']; ?></li>
+      <li><?php echo 'Numero Letti: ' . $rooms['beds']; ?></li>
    </ul>
   </div>
 </body>
