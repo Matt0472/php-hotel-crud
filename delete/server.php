@@ -7,9 +7,17 @@
 
   $idRoom = $_POST['id'];
 
-  $sql = "DELETE * FROM `stanze` WHERE `id` = `$idRoom`";
+  $sql = "SELECT * FROM `stanze` WHERE `id` = $idRoom";
+
   $result = $conn->query($sql);
 
+  if ($result && $result->num_rows == 0) {
+    die('NO ID');
+  }
+  $sql = "DELETE * FROM `stanze` WHERE `id` = `$idRoom`";
+
+  $result = $conn->query($sql);
+  
   if ($result) {
     echo 'CANCELLAZIONE AVVENUTA';
   } else {
@@ -19,4 +27,3 @@
 ?>
 
 
-<!-- $sql = "SELECT * FROM `stanze` WHERE `id` = $idRoom"; -->
