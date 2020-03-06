@@ -3,7 +3,6 @@
   include 'partials/header.php';
 ?>
 
-
     <h1 class="text-center">Tutte le stanze in hotel</h1>
     <table class="table">
       <thead>
