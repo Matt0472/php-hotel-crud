@@ -5,6 +5,15 @@
   if (empty($_POST['id'])) {
     die('Id non inserito');
   }
+  if (empty($_POST['beds'])) {
+    die('Id non inserito');
+  }
+  if (empty($_POST['floor'])) {
+    die('Id non inserito');
+  }
+  if (empty($_POST['room_number'])) {
+    die('Id non inserito');
+  }
   $idRoom = $_POST['id'];
   $beds = $_POST['beds'];
   $floor = $_POST['floor'];
@@ -20,13 +29,18 @@
     die('ID non esistente');
   }
   
-  $sql = "UPDATE `stanze` SET `room_number` = $roomNumber, `beds` = $beds , `floor` = $floor WHERE `id` = $idRoom";
-  $result = $conn->query($sql);
+  $stmt = $conn->prepare("UPDATE `stanze` SET `room_number` = ?, `beds` = ? , `floor` = ? WHERE `id` = ?");
+  $stmt->bind_param("iiii", $roomNumber, $beds, $floor, $idRoom);
+  $stmt->execute();
+  
 
-  if ($result) {
+  if ($stmt) {
     header("Location: $basePath/show/show.php?id=$idRoom");
   }
   else {
     echo "KO";
   }
+
+
+
  ?>
