@@ -34,13 +34,13 @@
   $stmt->execute();
   
 
-  if ($stmt) {
+  if ($stmt->affected_rows > 0) {
     header("Location: $basePath/show/show.php?id=$idRoom");
   }
   else {
     echo "KO";
   }
 
-
+  $conn->close();
 
  ?>

@@ -1,10 +1,17 @@
 <?php 
   include 'database.php';
 
+  if (empty($_GET['id'])) {
+    die('Nessun Id camera');
+  }
+
   $idRoom = $_GET['id'];
 
-  $sql = "SELECT * FROM `stanze` WHERE `id` = $idRoom";
-  $result = $conn->query($sql);
+  $stmt = $conn->prepare("SELECT * FROM `stanze` WHERE `id` = ?");
+  $stmt->bind_param("i", $idRoom);
+  $stmt->execute();
+  $result = $stmt->get_result();
+
 
   if ($result && $result->num_rows > 0) {
     $rooms = $result->fetch_assoc();
