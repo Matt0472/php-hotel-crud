@@ -30,4 +30,3 @@ if (!$insertId) {
 }
 
 $conn->close();
-?>
